@@ -26,21 +26,21 @@ function formValidate() {
         return;
     }
 // Validate required questions are not left unanswered
-var requiredQuestions = ['q1', 'q2', 'q8', 'q10'];
-var isValid = true;
+    var requiredQuestions = ['q1', 'q2', 'q8', 'q10'];
+    var isValid = true;
 
-for (var i = 0; i < requiredQuestions.length; i++) {
-    var question = requiredQuestions[i];
+    for (var i = 0; i < requiredQuestions.length; i++) {
+        var question = requiredQuestions[i];
 
-    if (!isQuestionAnswered(question)) {
+        if (!isQuestionAnswered(question)) {
         isValid = false;
         break;
+        }
     }
-}
-if (!isValid) {
-    displayErrorMessage('Please answer all required questions');
-    return;
-}
+    if (!isValid) {
+        displayErrorMessage('Please answer all required questions');
+        return;
+    }
 }
 // Function to handle form submission 
 function validateForm() {
