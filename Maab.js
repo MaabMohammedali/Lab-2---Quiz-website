@@ -1,6 +1,8 @@
+// Function to display error messages
 function displayErrorMessage(message) {
     document.getElementById('error-message').textContent = message;
 }
+// Function to validate the form
 function formValidate() {
     // this function worked once click on submit button
     document.getElementById('error-message').textContent = '';
@@ -8,7 +10,7 @@ function formValidate() {
    // I use this link to solve this part :https://www.codexworld.com/how-to/validate-first-last-name-with-regular-expression-using-javascript/
     var firstName = document.getElementById('firstName').value; //  method to access the input field by its ID
     var lastName = document.getElementById('lastName').value;
-    var nameRegex = /^[A-Za-z]+$/; // to check if both first name and last name contain only letters
+    var nameRegex = /^[A-Za-z]+$/; //  Regular expressions to check if both first name and last name contain only letters
 
     if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
         displayErrorMessage('Try again, only letters are accepted');
