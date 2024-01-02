@@ -1,11 +1,16 @@
 // Function to display error messages
 function displayErrorMessage(message) {
     document.getElementById('error-message').textContent = message;
+    alert(message); // You can customize this to display a better-looking success message
+}
+// Function to hide error messages
+function hideErrorMessages() {
+    document.getElementById('error-message').textContent = '';
 }
 // Function to validate the form
 function formValidate() {
     // Reset error message
-    document.getElementById('error-message').textContent = '';
+    hideErrorMessages();
      // VALID NAME
    // I use this link to solve this part :https://www.codexworld.com/how-to/validate-first-last-name-with-regular-expression-using-javascript/
     var firstName = document.getElementById('firstName').value; //  method to access the input field by its ID
@@ -41,6 +46,8 @@ function formValidate() {
         displayErrorMessage('Please answer all required questions');
         return;
     }
+    // If no errors, show success message
+    displaySuccessMessage('Form submitted successfully!');
 }
 // Function to handle form submission 
 function validateForm() {
