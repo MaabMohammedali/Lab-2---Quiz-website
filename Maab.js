@@ -26,7 +26,7 @@ function formValidate() {
         return;
     }
 // Validate required questions are not left unanswered
-    var requiredQuestions = ['q1', 'q2', 'q8', 'q10'];
+    var requiredQuestions = ['q1', 'q2', 'q10'];
     var isValid = true;
 
     for (var i = 0; i < requiredQuestions.length; i++) {
