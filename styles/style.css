@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.general{
+    height: 100vh;
+    width: 100vw;
+    background:#dbdee4;
+}
+.Quiz{
+    font-style: italic;
+    font: size 30px;
+    font-weight: bold;
+    color: #e205e6;
+    cursor: pointer;;
+}
+.detail{
+    position: absolute;
+    top:35%;
+    left:8%;
+}
+.detail h1{
+    color:black;
+    font-size: 50px;
+    font-weight: 700; 
+    line-height: 70px;
+
+}
+
+.detail h1 span{
+    color:#e205e6;
+}
+.detail p{
+    color:#1f1f2f;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.image img{
+    display:block;
+    width: 100%;
+    height: auto;
+}
+.image{
+    width: 30%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 200px;
+}
+
