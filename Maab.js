@@ -4,7 +4,7 @@ function displayErrorMessage(message) {
 }
 // Function to validate the form
 function formValidate() {
-    // this function worked once click on submit button
+    // Reset error message
     document.getElementById('error-message').textContent = '';
      // VALID NAME
    // I use this link to solve this part :https://www.codexworld.com/how-to/validate-first-last-name-with-regular-expression-using-javascript/
