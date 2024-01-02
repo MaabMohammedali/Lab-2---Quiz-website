@@ -42,3 +42,7 @@ if (!isValid) {
     return;
 }
 }
+// Function to handle form submission 
+function validateForm() {
+    formValidate(); // Call your existing validation function
+}
