@@ -1,0 +1,150 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the whole page */
+.general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: #dbdee4;
+}
+.content-container {
+    text-align: center; /* Center the text content */
+}
+
+/* Heading styles */
+.Quiz {
+    font-style: italic;
+    font-size: 35px;
+    font-weight: bold;
+    color: #e205e6;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Detail section styles */
+.detail {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.detail h1 {
+    color: black;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.detail h1 span {
+    color: #e205e6;
+}
+
+.detail p {
+    color: #1f1f2f;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+/* Image styles */
+.image {
+    width: 40%;
+    height: auto;
+    margin-left: 400px;
+}
+
+.image img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+/* Quiz details container */
+#quiz-detail {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+    font-size: large;
+    color: #070ed9;
+    font-style: oblique;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.answer-required{
+    font-size: 15px;
+    color:red
+}
+/* Question styles */
+.question {
+    margin-bottom: 20px; /* Add space between questions */
+}
+
+/* Radio and checkbox styles */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px; /* Adjust the spacing between the input and label */
+}
+
+/* Text input styles */
+input[type="text"] {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Error message styles */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Submit button styles */
+#submitBtn {
+    background-color: #e205e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: #07cb04;
+}

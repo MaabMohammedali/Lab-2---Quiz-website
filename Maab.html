@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz website</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <div id="error-message" class="error-message"></div>
+    <div id="quiz-detail">
+        <h1 class ="Quiz"> QUIZ</h1>
+        <form id="quiz-form">
+            <!--Visitor Information-->
+                <legend>Visitor Information:</legend><br>
+            <div>
+                <span class="answer-required">*</span>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed"> 
+            </div>
+            <div>
+                <span class="answer-required">*</span>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+" title="Only letters are allowed"> 
+            </div>
+            <div>
+                <span class="answer-required">*</span> 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div> 
+            <!-- Quiz Questions -->
+            <legend>Quiz Questions:</legend><br>
+            <!-- Radio Questions I use this link  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
+            <!-- and this link https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/ -->
+            <div class="question" id="required-q1">
+                <p></p><span class="answer-required">*</span> Q1. In which country did the FIFA World Football take place in 2023?</p>
+                <div>
+                    <input type="radio" name="q1" value="Brazil" id="brazil" required> 
+                    <label for="brazil">Brazil</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="Qatar" id="qatar" required> 
+                    <label for="qatar">Qatar</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="Germany" id="germany" required> 
+                    <label for="germany">Germany</label>
+                </div>
+            </div>
+            <div class="question" id="required-q2">
+                <p></p><span class="answer-required">*</span> Q2. In which team does Lionel Messi currently play?</p>
+                <div>
+                    <input type="radio" name="q2" value="Liverpool" id="liverpool" required> 
+                    <label for="liverpool">Liverpool</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="Inter Miami" id="inter miami" required> 
+                    <label for="inter miami">Inter Miami</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="Barcelona" id="barcelona" required>
+                    <label for="barcelona">Barcelona</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>Q3. Who holds the title of the top basketball player in the world for the 2023-24 season?</p>
+                <div>
+                    <input type="radio" name="q3" value="Kevin Durant" id="kevin durant"> 
+                    <label for="kevin durant">Kevin Durant</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="Nikola Jokic" id="nikola jokic"> 
+                    <label for="nikola jokic">Nikola Jokic</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="Anthony Davis" id="anthony davis">
+                    <label for="anthony davis">Anthony Davis</label>
+                </div>
+            </div>
+            <!-- To solve this task I use this link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox -->
+            <div class="question">
+                <p>Q4. Who is the current president of the United States?</p>
+                <div>
+                    <input type="checkbox" id="kamala harris" name="q4" value="kamala harris">
+                    <label for="kamala harris">Kamala Harris</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="donald trump" name="q4" value="donald trump">
+                    <label for="donald trump">Donald Trump</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="joe biden" name="q4" value="joe biden">
+                    <label for="joe biden">Joe Biden</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>Q5. what is the capital of India?</p>
+                <div>
+                    <input type="checkbox" id="mumbai" name="q5" value="mumbai">
+                    <label for="mumbai">Mumbai</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="new delhi" name="q5" value="new delhi">
+                    <label for="new delhi">New Delhi</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hyderabad" name="q5" value="hyderabad">
+                    <label for="hyderabad">Hyderabad</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>Q6. what is the colour of the sky?</p>
+                <div>
+                    <input type="checkbox" id="blue" name="q6" value="blue">
+                    <label for="blue">Blue</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="white" name="q6" value="white">
+                    <label for="white">White</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="colourless" name="q6" value="colourless">
+                    <label for="colourless">Colourless</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>Q7.  What is the biggest creature on the ocean?</p>
+                <div>
+                    <input type="checkbox" id="fish" name="q7" value="fish">
+                    <label for="fish">Fish</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="blue whale" name="q7" value="blue whale">
+                    <label for="blue whale">Blue Whale</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="shark" name="q7" value="shark">
+                    <label for="shark">Shark</label>
+                </div>
+            </div>
+            <!-- To solve this task I use this link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text -->
+            <div class="question">
+                <p>Q8.  which color has the highest energy?</p>
+                <input type="text" name="q8">
+            </div>
+
+            <div class="question" id="required-q9">
+                <p> Q9. Which river is recognized as the largest in the world?</p>
+                <input type="text" name="q9">
+            </div>
+
+            <div class="question">
+                <p>Q10.  What is 28+3?</p>
+                <input type="text" name="q10">
+            </div>
+
+            <div class="question">
+                <p>Q11. which season is the longest?</p>
+                <input type="text" name="q11">
+            </div>
+
+            <div class="question">
+                <p>Q12.  What is 55+33?</p>
+                <input type="text" name="q12">
+            </div>
+            <div>
+                <button type="submit" id="submitBtn">Submit</button>
+            </div>
+        </form>
+    <script src="Maab.js"></script>
+</body>
+</html>
