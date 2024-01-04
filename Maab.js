@@ -7,6 +7,17 @@ function displayErrorMessage(message) {
 function hideErrorMessages() {
     document.getElementById('error-message').textContent = '';
 }
+function isQuestionAnswered(question) {
+    var inputElements = document.getElementsByName(question);
+
+    for (var i = 0; i < inputElements.length; i++) {
+        if (inputElements[i].type === 'text' || inputElements[i].checked) {
+            return true;
+        }
+    }
+
+    return false;
+}
 // Function to validate the form
 function formValidate() {
     // Reset error message
@@ -31,21 +42,33 @@ function formValidate() {
         return;
     }
 // Validate required questions are not left unanswered
-    var requiredQuestions = ['q1', 'q2', 'q9'];
+    var requiredQuestions = ['q1', 'q2'];
     var isValid = true;
 
     for (var i = 0; i < requiredQuestions.length; i++) {
         var question = requiredQuestions[i];
 
         if (!isQuestionAnswered(question)) {
-        isValid = false;
-        break;
+            isValid = false;
+           // Display specific error message for each required question
+            switch (question) {
+                case 'q1':
+                    displayErrorMessage('Question 1 is required to answer');
+                    break;
+                case 'q2':
+                    displayErrorMessage('Question 2 is required to answer');
+                    break;
+            }
+            break;
         }
     }
+
     if (!isValid) {
-        displayErrorMessage('Please answer all required questions');
         return;
     }
+
+    document.getElementById('quiz-form').reset();
+
     // If no errors, show success message
     displaySuccessMessage('Form submitted successfully!');
 }

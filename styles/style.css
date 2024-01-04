@@ -22,10 +22,11 @@ body {
 /* Heading styles */
 .Quiz {
     font-style: italic;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     color: #e205e6;
     cursor: pointer;
+    text-align: center;
 }
 
 /* Detail section styles */
@@ -89,6 +90,7 @@ legend {
     border: none;
     font-size: large;
     color: #070ed9;
+    font-style: oblique;
 }
 
 label {
