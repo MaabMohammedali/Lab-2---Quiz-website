@@ -3,6 +3,12 @@ function displayErrorMessage(message) {
     document.getElementById('error-message').textContent = message;
     alert(message); 
 }
+
+function displaySuccessMessage(message) {
+    document.getElementById('error-message').textContent = message;
+    alert(message);
+}
+
 // Function to hide error messages
 function hideErrorMessages() {
     document.getElementById('error-message').textContent = '';
@@ -70,7 +76,7 @@ function formValidate() {
     document.getElementById('quiz-form').reset();
 
     // If no errors, show success message
-    displaySuccessMessage('Form submitted successfully!');
+    displaySuccessMessage('Quiz submitted successfully!');
 }
 // Function to handle form submission 
 function validateForm() {
