@@ -18,7 +18,7 @@ function formValidate() {
     var nameRegex = /^[A-Za-z]+$/; //  Regular expressions to check if both first name and last name contain only letters
 
     if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
-        displayErrorMessage('Try again, only letters are accepted');
+        displayErrorMessage('Try again, First name and Last name must contain only letters');
         return;
     }
 
