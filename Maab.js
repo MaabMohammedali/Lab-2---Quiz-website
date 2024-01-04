@@ -1,7 +1,7 @@
 // Function to display error messages
 function displayErrorMessage(message) {
     document.getElementById('error-message').textContent = message;
-    alert(message); // You can customize this to display a better-looking success message
+    alert(message); 
 }
 // Function to hide error messages
 function hideErrorMessages() {
