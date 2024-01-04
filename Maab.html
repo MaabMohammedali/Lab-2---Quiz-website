@@ -12,26 +12,28 @@
         <h1 class ="Quiz"> Quiz:</h1>
         <form id="quiz-form">
             <!--Visitor Information-->
-            <fieldset>
-                <legend>Visitor Information</legend>
+                <legend>Visitor Information:</legend><br>
             <div>
+                <span class="answer-required">*</span>
                 <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed">
+                <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed"> 
             </div>
             <div>
+                <span class="answer-required">*</span>
                 <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+" title="Only letters are allowed">
+                <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+" title="Only letters are allowed"> 
             </div>
             <div>
+                <span class="answer-required">*</span> 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div> 
-            </fieldset>
             <!-- Quiz Questions -->
+            <legend>Quiz Questions:</legend><br>
             <!-- Radio Questions I use this link  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
             <!-- and this link https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/ -->
             <div class="question" id="required-q1">
-                <p><span>*</span> Q1. In which country did the FIFA World Football take place in 2023?</p>
+                <p></p><span class="answer-required">*</span> Q1. In which country did the FIFA World Football take place in 2023?</p>
                 <div>
                     <input type="radio" name="q1" value="Brazil" id="brazil" required> 
                     <label for="brazil">Brazil</label>
@@ -46,7 +48,7 @@
                 </div>
             </div>
             <div class="question" id="required-q2">
-                <p><span>*</span> Q2. In which team does Lionel Messi currently play?</p>
+                <p></p><span class="answer-required">*</span> Q2. In which team does Lionel Messi currently play?</p>
                 <div>
                     <input type="radio" name="q2" value="Liverpool" id="liverpool" required> 
                     <label for="liverpool">Liverpool</label>
@@ -147,7 +149,7 @@
             </div>
 
             <div class="question" id="required-q9">
-                <p><span>*</span> Q9. Which river is recognized as the largest in the world?</p>
+                <p></p><span class="answer-required">*</span> Q9. Which river is recognized as the largest in the world?</p>
                 <input type="text" name="q10" required>
             </div>
 
