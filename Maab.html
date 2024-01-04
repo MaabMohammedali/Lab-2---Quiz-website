@@ -11,6 +11,9 @@
     <div id="quiz-detail">
         <h1 class ="Quiz"> Quiz:</h1>
         <form id="quiz-form">
+            <!--Visitor Information-->
+            <fieldset>
+                <legend>Visitor Information</legend>
             <div>
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed">
@@ -23,6 +26,7 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div> 
+            </fieldset>
             <!-- Quiz Questions -->
             <!-- Radio Questions I use this link  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
             <!-- and this link https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/ -->
@@ -41,7 +45,6 @@
                     <label for="germany">Germany</label>
                 </div>
             </div>
-
             <div class="question" id="required-q2">
                 <p><span>*</span> Q2. In which team does Lionel Messi currently play?</p>
                 <div>
