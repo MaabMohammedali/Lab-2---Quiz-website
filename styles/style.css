@@ -135,6 +135,7 @@ input[type="text"] {
 
 /* Submit button styles */
 #submitBtn {
+    width: 100%;
     background-color: #e205e6;
     color: #fff;
     padding: 10px 20px;
@@ -146,5 +147,25 @@ input[type="text"] {
 }
 
 #submitBtn:hover {
-    background-color: #07cb04;
+    background-color: #bcef3c;
+}
+#total-score {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+#showResultBtn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #e205e6;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+#showResultBtn:hover {
+    background-color: #bcef3c;
 }
