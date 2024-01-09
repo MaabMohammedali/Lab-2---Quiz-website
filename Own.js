@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function () {
+    loadQuizFromLocalStorage();
+});
+
 function addNewQuestion() {
     // Get values from the form
     var questionText = document.getElementById('question-text').value;
@@ -17,6 +21,10 @@ function addNewQuestion() {
     storeQuestionInLocalStorage(question);
      // Display the question
     displayQuestion(question);
+
+      // Clear the form for the next question
+    document.getElementById('question-form').reset();
+    
 }
 // Use local storage to save the created quiz on the user's browser.
 function storeQuestionInLocalStorage(question) {
@@ -62,10 +70,23 @@ function displayQuestion(question) {
     // Append the question to the quiz container
     document.getElementById('quiz-questions').innerHTML += questionHTML;
 }
+
+function displayQuizInterface() {
+    // Retrieve quiz from local storage
+    var quiz = JSON.parse(localStorage.getItem('quiz')) || [];
+
+    // Display each question in the quiz
+    quiz.forEach(function (question, index) {
+        displayQuestion(question, index);
+    });
+
+    // Add a button to submit answers
+    var submitButton = document.createElement('button');
+    submitButton.textContent = 'Submit Answers';
+    submitButton.addEventListener('click', submitAnswers);
+    document.getElementById('quiz-questions').appendChild(submitButton);
+}
 function setAnswerType(type) {
     // Set the answer type based on the button clicked
     document.getElementById('answer-type').value = type;
 }
-document.addEventListener('DOMContentLoaded', function () {
-    loadQuizFromLocalStorage();
-});

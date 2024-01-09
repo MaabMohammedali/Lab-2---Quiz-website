@@ -29,9 +29,14 @@
             
             <label for="correct-answer">Correct Answer(s):</label>
             <input type="text" id="correct-answer" name="correctAnswer" required>
-            <button type="button" onclick="addQuestion()">Add Question</button><br>
+            <button type="button" onclick="addNewQuestion()">Add Question</button><br>
+            <button onclick="resetQuiz()">Reset Quiz</button>
         </form>
 
+        <!-- Display added questions -->
+        <div id="quiz-questions">
+            <!-- Questions will be displayed here -->
+        </div>
     </div>
 
     <script src="Own.js"></script>
