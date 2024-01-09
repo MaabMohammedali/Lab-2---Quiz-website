@@ -7,13 +7,33 @@
     <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-    <!--Question and Answers--> 
     <div class="quiz-container">
         <h2 class ="Create"> Create your own Quiz</h2>
         <!-- Form for adding new questions -->
         <form id="question-form">
             <label for="question-text">Question:</label>
             <input type="text" id="question-text" name="question" required>
+            
+            <!-- Answer Type Buttons -->
+            <label for="answer-type">Answer Type:</label>
+            <div class="answer-type-buttons">
+                 <!-- // Each question has a text box for the question itself. --> 
+                <button type="button" onclick="setAnswerType('textbox')">Textbox</button><br>
+                <button type="button" onclick="setAnswerType('multiple-choice')">Multiple Choice</button>
+                <button type="button" onclick="setAnswerType('radio-buttons')">Radio Buttons</button>
+            </div>
+            <input type="hidden" id="answer-type" name="answerType">
+            
+            <label for="answers">Possible Answers:</label>
+            <textarea id="answers" name="answers" rows="4" required></textarea>
+            
+            <label for="correct-answer">Correct Answer(s):</label>
+            <input type="text" id="correct-answer" name="correctAnswer" required>
+    
+        </form>
+
     </div>
+
+    <script src="Own.js"></script>
 </body>
 </html>
