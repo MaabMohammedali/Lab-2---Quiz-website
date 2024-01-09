@@ -2,14 +2,14 @@ var totalScore = 0;
 // Function to display error messages
 function displayErrorMessage(message) {
     document.getElementById('error-message').textContent = message;
-    alert(message); 
+    alert(message); //  displaying a pop-up dialog with the error message
 }
-
+// From Assignment: If no errors, show success messsge to tell that information are entered correctly!
 function displaySuccessMessage(message) {
     document.getElementById('error-message').textContent = message;
     alert(message);
 }
-
+// From Assigment: If the visitor corrects the errors , the error messeges should be hidden again!
 // Function to hide error messages
 function hideErrorMessages() {
     document.getElementById('error-message').textContent = '';
@@ -18,7 +18,7 @@ function isQuestionAnswered(question) {
     var inputElements = document.getElementsByName(question);
 
     for (var i = 0; i < inputElements.length; i++) {
-        if (inputElements[i].type === 'text' || inputElements[i].checked) {
+        if (inputElements[i].type === 'text' || inputElements[i].checked) { // Check if the input is a text field or a checked checkbox
             return true;
         }
     }
@@ -31,7 +31,7 @@ function displayTotalScore() {
     var totalScoreElement = document.getElementById('total-score');
     totalScoreElement.textContent = 'Quiz submitted successfully! Your total score is: ' + totalScore;
 }
-
+// This function returns an object containing correct answers for each question in the quiz.
 function getCorrectAnswers() {
     return {
         q1: 'Qatar',
@@ -52,14 +52,14 @@ function getCorrectAnswers() {
 function calculateScore() {
     var correctAnswers = getCorrectAnswers();
     var userAnswers = {
-        q1: getSelectedRadioValue('q1'),
+        q1: getSelectedRadioValue('q1'),// is used for single-choice questions 
         q2: getSelectedRadioValue('q2'),
         q3: getSelectedRadioValue('q3'),
-        q4: getSelectedCheckboxValues('q4'),
+        q4: getSelectedCheckboxValues('q4'),// is used for multiple-choice questions with checkboxes 
         q5: getSelectedCheckboxValues('q5'),
         q6: getSelectedCheckboxValues('q6'),
         q7: getSelectedCheckboxValues('q7'),
-        q8: document.getElementsByName('q8')[0].value.trim().toLowerCase(),
+        q8: document.getElementsByName('q8')[0].value.trim().toLowerCase(),// The trim method is a string manipulation function in JavaScript that removes whitespace
         q9: document.getElementsByName('q9')[0].value.trim().toLowerCase(),
         q10: document.getElementsByName('q10')[0].value.trim().toLowerCase(),
         q11: document.getElementsByName('q11')[0].value.trim().toLowerCase(),
