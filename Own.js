@@ -1,3 +1,8 @@
+// To solve this part I use the following link :
+// https://blog.logrocket.com/localstorage-javascript-complete-guide/
+// https://www.taniarascia.com/how-to-use-local-storage-with-javascript/
+
+
 document.addEventListener('DOMContentLoaded', function () {
     loadQuizFromLocalStorage();
 });
@@ -67,20 +72,18 @@ function displayQuestion(question) {
     }
     questionHTML += '</div>';
 
-    // Append the question to the quiz container
+
     document.getElementById('quiz-questions').innerHTML += questionHTML;
 }
 
-function displayQuizInterface() {
-    // Retrieve quiz from local storage
+function displayQuizUI() {
+    
     var quiz = JSON.parse(localStorage.getItem('quiz')) || [];
 
-    // Display each question in the quiz
     quiz.forEach(function (question, index) {
         displayQuestion(question, index);
     });
 
-    // Add a button to submit answers
     var submitButton = document.createElement('button');
     submitButton.textContent = 'Submit Answers';
     submitButton.addEventListener('click', submitAnswers);
