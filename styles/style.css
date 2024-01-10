@@ -109,7 +109,11 @@ input {
 }
 /* Question styles */
 .question {
-    margin-bottom: 20px; /* Add space between questions */
+    margin-bottom: 10px; /* Add space between questions */
+}
+.answer-option {
+    display: flex;
+    align-items: center;
 }
 
 /* Radio and checkbox styles */
